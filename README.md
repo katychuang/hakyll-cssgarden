@@ -1,4 +1,4 @@
 hakyll-cssgarden
 ================
 
-css garden showcasing differt ways to style default hakyll theme
+css garden showcasing different ways to style default hakyll theme
