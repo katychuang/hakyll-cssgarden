@@ -1,0 +1,7 @@
+
+*.DS_Store
+*.o
+*.hi
+
+_site/*
+_cache/*
