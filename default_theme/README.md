@@ -3,21 +3,23 @@ Default Theme
 
 When you install hakyll, the default theme works with this directory structure: 
 
+```sh
    |-css
    |-images
    |-posts
    |-templates
-
+```
 
 
 The templates have this structure by default:
 
+```sh
   |-templates/
     |---archive.html
     |---default.html
     |---post-list.html
     |---post.html
-
+```
 
 
 The newly added css files are in the /css/ folder.
