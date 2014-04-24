@@ -1,22 +1,28 @@
 body {
-    color: black;
+    color: #A39A9A;
+    font-family: monospace, helvetica, sans-serif;
     font-size: 16px;
     margin: 0px auto 0px auto;
     width: 600px;
 }
 
 div#header {
-    border-bottom: 2px solid black;
+    border-bottom: 4px ridge #E4E2CA;
     margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+    padding: 0px 0px 12px 0px;
+    background: url(http://upload.wikimedia.org/wikipedia/commons/e/e6/Manhattan_Herald_Square_James_Gordon_Bennett_Memorial.JPG) no-repeat;
+    background-size: cover;
+    background-position: center -410px;
+    height: 250px;
 }
 
 div#logo a {
-    color: black;
+    color: #0E5A2D;
     float: left;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    background: rgba(248, 248, 248, 0.5);
 }
 
 div#header #navigation {
@@ -24,12 +30,17 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: black;
+    color: #BCD6C7;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: light;
     margin-left: 12px;
     text-decoration: none;
     text-transform: uppercase;
+    background: rgba(0,0,0,0.5);
+}
+
+div#header #navigation a:hover {
+    color: #fff;
 }
 
 div#footer {
