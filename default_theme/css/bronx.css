@@ -1,9 +1,11 @@
+@import "_base.css";
+
 body {
     background: #eee;
     color: #000;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    margin: 0px auto 100px auto;
+    margin: 50px auto 100px auto;
     max-width: 100%;
     padding: 30px 50px 50px 30px;
 }
