@@ -1,13 +1,12 @@
 ## hakyll-cssgarden
-================
 
-description: css garden showcasing different ways to style default hakyll theme
+Description: This collection of styles aims to help haskell bloggers set up beautiful blogs with Hakyll static site generator by showcasing available themes.
 
-auhor: Katherine Chuang @katychuang
-
+Auhor: Katherine Chuang @katychuang
 
 
-Installation & Setup
+
+## Installation & Setup
 ===
 
 To preview the themes, you can follow these steps
