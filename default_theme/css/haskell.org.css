@@ -1,0 +1,85 @@
+@import "base.css";
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    color: black;
+    font-size: 16px;
+    margin: 40px auto 0px auto;
+}
+
+div#header {
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+    padding: 12px 30px 12px 30px;
+    background: linear-gradient(to right,#19111f 0%,#2c1e37 100%);
+}
+
+div#logo a {
+    color: #FFFFFF;
+    float: left;
+    font-family: Ubuntu, 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#header #navigation {
+    text-align: right;
+}
+
+div#header #navigation a {
+    color: #d1cddc!important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div#header #navigation a:hover{
+  color: #FFFFFF;
+}
+
+div#content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+div#content h1{
+  color: #333333;
+  font-size: 36px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#content p{
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+div#footer {
+    border-top: solid 2px black;
+    color: #555;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 12px 0px 12px 0px;
+    text-align: right;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+div.info {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+}
