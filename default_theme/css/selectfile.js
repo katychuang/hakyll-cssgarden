@@ -3,17 +3,22 @@ $(function () {
   var s = "";
   var tValue = "default";
   query.split("&").forEach(function(part) {
-        var item = part.split("=");
-        s += " " + item;
-        if (item[0] == "theme"){
-          tValue = item[1];
-        }
+    var item = part.split("=");
+    s += " " + item;
+    if (item[0] == "theme"){
+      tValue = item[1];
+    }
   });
   
   changeTheme(tValue);
   updateLinks(tValue);
-  $('.styleInfo').html("Currently viewing <a href='/css/" + tValue + ".css'>" + tValue + "</a> ; " + s);
-  
+
+  if (window.location.href.indexOf("posts") >= 0){
+    console.log("posts");
+    $('[title="hakyll_theme"]').attr('href','../../../css/'+tValue.toLowerCase()+'.css');
+  } else {
+  $('.styleInfo').html("Currently viewing <a href='./css/" + tValue + ".css'>" + tValue + "</a> ; ");
+  }
 
   $('#themes').change(function () {
       var item = $(':selected').val();
