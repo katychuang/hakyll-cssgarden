@@ -11,9 +11,8 @@ body {
 }
 
 div#header {
-    border-bottom: 2px solid black;
-    margin-bottom: 30px;
-    padding: 12px 30px 12px 30px;
+    margin-bottom: 0px;
+    padding: 50px;
     background: linear-gradient(to right,#19111f 0%,#2c1e37 100%);
 }
 
@@ -50,32 +49,41 @@ div#content {
 }
 
 div#content h1{
-  color: #333333;
+  color: #6e618d;
   font-size: 36px;
   font-family: 'Open Sans', sans-serif;
 }
 
+div#content, /* this line for archives page */
 div#content p{
     color: #333333;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
 }
 
+div#content a{
+  color: #428bca;
+  text-decoration: none;
+}
+
 div#footer {
-    border-top: solid 2px black;
-    color: #555;
+    color: #999999;
     font-size: 12px;
-    margin-top: 30px;
-    padding: 12px 0px 12px 0px;
-    text-align: right;
+    text-align: center;
+    height: 4em;
+    background-color: #323232;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1em;
+    font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 20px;
+div#footer a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 div.info {
@@ -83,3 +91,4 @@ div.info {
     font-size: 14px;
     font-style: italic;
 }
+
