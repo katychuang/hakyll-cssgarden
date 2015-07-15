@@ -14,8 +14,7 @@ $(function () {
   updateLinks(tValue);
 
   if (window.location.href.indexOf("posts") >= 0){
-    console.log("posts");
-    $('[title="hakyll_theme"]').attr('href','../../../css/'+tValue.toLowerCase()+'.css');
+    $('[title="hakyll_theme"]').attr('href','../css/'+tValue.toLowerCase()+'.css');
   } else {
   $('.styleInfo').html("Currently viewing <a href='./css/" + tValue + ".css'>" + tValue + "</a> ; ");
   }
@@ -33,7 +32,7 @@ function changeTheme(theme) {
 
 function updateLinks(theme) {
   $.each(
-    $('#navigation a'), function(index, value) {
+    $('a'), function(index, value) {
       $(value).attr('href', $(value).attr('href') + '?theme=' + theme);
     }
   );
