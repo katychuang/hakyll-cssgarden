@@ -16,6 +16,11 @@ To preview the themes, you can follow these steps
 3. cd into `default_theme`
 4. run server with `./site preview` (the source for it comes from site.hs)
 
+## Want to submit themes?
 
+* fork the site on github
+* if you have a custom site.hs or template files and assets, create a new directory.
+* if you're using the out of the box site.hs and template files: add the file to the css directory under `default_theme` and add an option to the dropdown menu in default.html
+* test it out, then push your changes up and open a pull request
 
 
