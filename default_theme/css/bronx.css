@@ -1,35 +1,63 @@
-@import "_base.css";
+@import "base.css";
+
+@font-face {
+  font-family: 'Coustard';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Coustard'), url(../images/Coustard.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Antic Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Antic Slab'), local('AnticSlab-Regular'), url(../images/AnticSlab.woff) format('woff');
+}
 
 body {
-    background: #eee;
     color: #000;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     font-size: 16px;
-    margin: 50px auto 100px auto;
+    margin: 0 auto 100px auto;
     max-width: 100%;
     padding: 30px 50px 50px 30px;
 }
 
-div#header {
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
-}
-
-div#logo a {
-    color: #00B;
-    float: right;
-    font-size: 38px;
-    font-weight: bold;
+a{
+    color: rgb(109, 145, 225);
     text-decoration: none;
 }
 
+div#header {
+    border-bottom: 1px solid rgb(109, 145, 225);
+    margin-bottom: 30px;
+    padding: 65px 0px 12px 0px;
+    z-index: 999;
+    width:100%;
+}
+
+div#logo {
+    width:100%;
+    text-align: center;
+}
+
+div#logo a {
+    color: #666;
+    font-family: 'Coustard', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow:;
+}
+
 div#header #navigation {
-    margin-top:50px;
-    text-align: right;
+    margin-top: 20px;
+    text-align: center;
 }
 
 div#header #navigation a {
     color: #00B;
+    font-family: 'Antic Slab', sans-serif;
     font-size: 20px;
     font-weight: bold;
     margin-left: 5px;
@@ -38,17 +66,17 @@ div#header #navigation a {
 }
 
 div#header #navigation a:hover {
-    background:#00B;
+    background:#113;
     color:white;
     text-decoration: none;
 }
 
 
 div#footer {
-    background: #ccc;
+    background: rgb(109, 145, 225);
     color: #444;
     font-size: 12px;
-    padding: 42px 0px 42px 0px;
+    padding: 32px 0px 32px 0px;
     text-align: center;
     position:fixed;
     bottom:0;
