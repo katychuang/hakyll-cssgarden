@@ -1,0 +1,14 @@
+<ul class="recent">
+    $for(posts)$
+        <li>
+          <a href="$url$">
+            $if(mainImg)$
+            <div class="index">
+              <img src="/images/$mainImg$" class="cover" />
+            </div>
+            $endif$
+            <span>$title$</span>
+          </a>
+        </li>
+    $endfor$
+</ul>

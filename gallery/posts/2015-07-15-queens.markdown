@@ -1,0 +1,8 @@
+---
+title: queens 
+tags: simple, default
+cover: queens-index.png
+screens: queens-index, queens-about, queens-archive, queens-contact, queens-index
+---
+
+This is a simple theme

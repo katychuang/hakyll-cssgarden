@@ -1,0 +1,8 @@
+---
+title: bronx 
+tags: simple, default
+cover: bronx-index.png
+screens: bronx-index, bronx-about, bronx-archive, bronx-contact, bronx-index
+---
+
+This is a simple theme
