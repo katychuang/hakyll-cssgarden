@@ -1,0 +1,8 @@
+---
+title: haskell.org 
+tags: simple, default
+cover: haskell.org-index.png
+screens: haskell.org-index, haskell.org-about, haskell.org-archive, haskell.org-contact, haskell.org-index
+---
+
+This is a simple theme

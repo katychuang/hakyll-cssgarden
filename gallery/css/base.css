@@ -1,0 +1,35 @@
+div.topnav{
+    background: #343444;
+    color: #FFF;
+    font: 12px/14px monospace, sans-serif;
+    left:0;
+    padding: 5px;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 999;
+}
+
+div.topnav .box {
+    display: table-cell;
+    text-align: left;
+    width: 600px;
+}
+
+select#themes {
+    width: 200px;
+    padding: 3px 12px;
+    height: 28px;
+    overflow: hidden;
+    background: #ccc;
+    border-radius: 0;
+}
+
+div.topnav .styleInfo{
+    display: table-cell;
+    text-align: right;
+}
+
+div.topnav .styleInfo a{
+    color: white;
+}

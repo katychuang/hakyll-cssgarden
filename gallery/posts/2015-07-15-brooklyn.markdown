@@ -1,0 +1,8 @@
+---
+title: brooklyn 
+tags: simple, default
+cover: brooklyn-index.png
+screens: brooklyn-index, brooklyn-about, brooklyn-archive, brooklyn-contact, brooklyn-index
+---
+
+This is a simple theme
