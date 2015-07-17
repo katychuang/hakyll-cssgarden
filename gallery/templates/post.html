@@ -1,14 +1,23 @@
 <div class="sidebar">
+  <div class="download">
+    <a href="#" class="btn">Download</a>
+  </div>
+  <div class="demo">
+    <a href="#" class="btn">Live Demo</a>
+  </div>
+  <div class="info"> 
+    $if(tags)$
+    <h3>Tags</h3>
+    $tags$
+    $endif$ 
+  </div>
+
   <div class="info">
+    <h3>Stats/Information</h3>
       Posted on $date$
       $if(author)$
           by $author$
       $endif$
-  </div>
-  <div class="info"> 
-    $if(tags)$
-    Tags: $tags$
-    $endif$ 
   </div>
 </div>
 
