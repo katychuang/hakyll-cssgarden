@@ -3,23 +3,25 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    color: black;
+    background-color: #F1F1F1;
+    color: #555555;
     font-family: Avenir, 'Open Sans', sans-serif;
     font-size: 16px;
-    margin: 50px auto 0px auto;
+    margin: 0 auto 0px auto;
     width: 100%;
 }
 
 div#header {
+    background-color: #FFFFFF;
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding: 12px 50px 12px 50px;
 }
 
 div#logo a {
     color: black;
     float: left;
-    font-size: 36px;
+    font-size: 28px;
     text-decoration: none;
 }
 
@@ -29,10 +31,10 @@ div#header #navigation {
 
 div#header #navigation a {
     color: #888888;
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 12px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: Capitalize;
 }
 
 div#header #navigation a:hover {
@@ -40,12 +42,23 @@ div#header #navigation a:hover {
 }
 
 div#content{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  border-radius: 2px;
 }
 
 div#content .main{
   width: 600px;
+}
+
+div#content a{
+  color: #1352A2;
+  text-decoration: none;
 }
 
 div#content .sidebar {
