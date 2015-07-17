@@ -127,6 +127,7 @@ div.info {
 
 
 div.promo img.cover{
+  background-color: #FFFFFF;
   border: 1px solid #e5e5e5;
   display: block;
   max-width: 100%;
@@ -155,6 +156,7 @@ ul.recent li:nth-child(odd){
 }
 
 div.index img.cover {
+  background-color: #FFFFFF;
   border: 1px solid #e5e5e5;
   display: block;
   max-width: 100%;
