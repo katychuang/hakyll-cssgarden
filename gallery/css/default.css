@@ -44,6 +44,7 @@ div#header #navigation a:hover {
 div#content{
   margin-left: auto;
   margin-right: auto;
+  max-width: 960px;
   padding: 30px;
   background-color: #ffffff;
   border-left: 1px solid #FFFFFF;
@@ -53,7 +54,7 @@ div#content{
 }
 
 div#content .main{
-  width: 600px;
+  width: 620px;
 }
 
 div#content a{
@@ -62,8 +63,35 @@ div#content a{
 }
 
 div#content .sidebar {
-  width: 200px;
+  width: 300px;
   float: right;
+}
+
+div#content .sidebar .download {
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 2px;
+  text-align: center;
+}
+div#content .sidebar .download a {
+  width: 100%;
+  display: block;
+}
+div#content .sidebar .demo {
+  border-radius: 2px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+div#content .sidebar .demo a {
+  padding: 10px 0;
+  width: 100%;
+  display: block;
+  border: 1px solid #DEDFDF;
+}
+
+div#content .sidebar .btn{
+  text-decoration: none;
 }
 
 div#footer {
