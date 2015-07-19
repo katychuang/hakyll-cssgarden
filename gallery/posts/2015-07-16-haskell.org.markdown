@@ -3,6 +3,8 @@ title: haskell.org
 tags: simple, default
 cover: haskell.org-index.png
 screens: haskell.org-index, haskell.org-about, haskell.org-archive, haskell.org-contact, haskell.org-index
+demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=haskell.org
+download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/haskell.org
 ---
 
 This is a simple theme
