@@ -21,10 +21,10 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    tags <- buildTags "posts/*" (fromCapture "tags/*.html") 
-
+    tags <- buildTags "theme/*" (fromCapture "tags/*.html")
+  
     tagsRules tags $ \tag pattern -> do 
-      let title = "Posts tagged \'" ++ tag ++ "\'" 
+      let title = "Themes tagged \'" ++ tag ++ "\'" 
       route idRoute 
       compile $ do 
           posts <- recentFirst =<< loadAll pattern 
@@ -38,7 +38,7 @@ main = hakyll $ do
               >>= loadAndApplyTemplate "templates/default.html" ctx 
               >>= relativizeUrls
 
-    match "posts/*" $ do
+    match "theme/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -63,7 +63,8 @@ main = hakyll $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            posts <- fmap (take 10) . recentFirst =<< 
+              loadAll "theme/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Recent Themes"      `mappend`
