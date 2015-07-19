@@ -3,6 +3,10 @@ title: bronx
 tags: simple, default
 cover: bronx-index.png
 screens: bronx-index, bronx-about, bronx-archive, bronx-contact, bronx-index
+demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=bronx
+download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/bronx.css
 ---
 
-This is a simple theme
+This is a simple theme for the default installation of Hakyll 4, that takes the full width of the page. 
+
+Here is another paragraph.

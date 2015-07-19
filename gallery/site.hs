@@ -82,6 +82,8 @@ postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     mainImgCtx `mappend`
+    downloadCtx `mappend`
+    demoUrlCtx `mappend`
     defaultContext
 
 postCtxWithTags :: Tags -> Context String 
@@ -94,6 +96,31 @@ mainImgCtx =
     (\item -> do 
       identifier <- getUnderlying 
       mainImg <- getMetadataField identifier "cover" 
+      case mainImg of 
+        Nothing -> return "blank.png" 
+        Just t  -> return t 
+   ) 
+
+
+demoUrlCtx :: Context String 
+demoUrlCtx = 
+  field 
+    "demoUrl" 
+    (\item -> do 
+      identifier <- getUnderlying 
+      mainImg <- getMetadataField identifier "demo" 
+      case mainImg of 
+        Nothing -> return "blank.png" 
+        Just t  -> return t 
+   ) 
+
+downloadCtx :: Context String
+downloadCtx = 
+  field 
+    "downloadUrl" 
+    (\item -> do 
+      identifier <- getUnderlying 
+      mainImg <- getMetadataField identifier "download" 
       case mainImg of 
         Nothing -> return "blank.png" 
         Just t  -> return t 

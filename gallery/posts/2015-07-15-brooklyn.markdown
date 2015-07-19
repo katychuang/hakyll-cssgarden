@@ -3,6 +3,8 @@ title: brooklyn
 tags: simple, default
 cover: brooklyn-index.png
 screens: brooklyn-index, brooklyn-about, brooklyn-archive, brooklyn-contact, brooklyn-index
+demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=brooklyn
+download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/brooklyn.css
 ---
 
 This is a simple theme
