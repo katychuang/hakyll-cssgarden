@@ -31,8 +31,8 @@ RenderUrlsToFile = function(urls, callbackPerUrl, callbackFinal) {
             urlIndex++;
             page = webpage.create();
             page.viewportSize = {
-                width: 1920,
-                height: 1280
+                width: 1440,
+                height: 900
             };
             page.settings.userAgent = "Phantom.js bot";
             return page.open("http://" + url, function(status) {
