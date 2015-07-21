@@ -23,8 +23,8 @@ main = hakyll $ do
 
     -- http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html
     tags <- buildTags "theme/*" (fromCapture "tags/*.html")
-  
-    tagsRules tags $ \tag pattern -> do 
+
+    tagsRules tags $ \tag pattern -> do   
       let title = "Themes tagged \'" ++ tag ++ "\'" 
       route idRoute 
       compile $ do 
