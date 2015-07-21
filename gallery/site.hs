@@ -21,6 +21,7 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
+    -- http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html
     tags <- buildTags "theme/*" (fromCapture "tags/*.html")
   
     tagsRules tags $ \tag pattern -> do 
@@ -30,7 +31,7 @@ main = hakyll $ do
           posts <- recentFirst =<< loadAll pattern 
           let ctx = 
                 constField "title" title `mappend` 
-                listField "posts" postCtx (return posts) `mappend` 
+                listField "posts" postCtx (return posts) `mappend`
                 defaultContext 
 
           makeItem "" 
@@ -41,8 +42,8 @@ main = hakyll $ do
     match "theme/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
+            >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
             >>= relativizeUrls
 
     create ["archive.html"] $ do
@@ -111,7 +112,7 @@ demoUrlCtx =
       identifier <- getUnderlying 
       mainImg <- getMetadataField identifier "demo" 
       case mainImg of 
-        Nothing -> return "blank.png" 
+        Nothing -> return "" 
         Just t  -> return t 
    ) 
 
