@@ -53,6 +53,7 @@ main = hakyll $ do
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
                     constField "title" "Archives"            `mappend`
+                    mainImgCtx <>
                     defaultContext
 
             makeItem ""
@@ -94,7 +95,7 @@ postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
 mainImgCtx :: Context String 
 mainImgCtx = 
   field 
-    "mainImg" 
+    "cover" 
     (\item -> do 
       identifier <- getUnderlying 
       mainImg <- getMetadataField identifier "cover" 
