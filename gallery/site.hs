@@ -1,7 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
+import           Data.Monoid
 import           Hakyll
+import           Data.Map as M (lookup)
+import           Data.Maybe
 
 
 --------------------------------------------------------------------------------
@@ -84,7 +86,7 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
-    mainImgCtx `mappend`
+    mainImgCtx <>
     downloadCtx `mappend`
     demoUrlCtx `mappend`
     defaultContext
@@ -94,16 +96,10 @@ postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
 
 mainImgCtx :: Context String 
 mainImgCtx = 
-  field 
-    "cover" 
-    (\item -> do 
+  field "cover" $ \item -> do
       identifier <- getUnderlying 
-      mainImg <- getMetadataField identifier "cover" 
-      case mainImg of 
-        Nothing -> return "blank.png" 
-        Just t  -> return t 
-   ) 
-
+      metadata <- getMetadata (itemIdentifier item)
+      return $ fromMaybe "blank.png" $ M.lookup "cover" metadata
 
 demoUrlCtx :: Context String 
 demoUrlCtx = 
