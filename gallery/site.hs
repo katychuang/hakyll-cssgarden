@@ -32,8 +32,8 @@ main = hakyll $ do
       compile $ do 
           posts <- recentFirst =<< loadAll pattern 
           let ctx = 
-                constField "title" title `mappend` 
-                listField "posts" postCtx (return posts) `mappend`
+                constField "title" title <>
+                listField "posts" postCtx (return posts) <>
                 defaultContext 
 
           makeItem "" 
@@ -53,8 +53,8 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadAll "theme/*"
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "All Themes"            `mappend`
+                    listField "posts" postCtx (return posts) <>
+                    constField "title" "All Themes"          <>
                     defaultContext
 
             makeItem ""
@@ -69,8 +69,8 @@ main = hakyll $ do
             posts <- fmap (take 10) . recentFirst =<< 
               loadAll "theme/*"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Recent Themes"      `mappend`
+                    listField "posts" postCtx (return posts) <>
+                    constField "title" "Recent Themes"       <>
                     defaultContext
 
             getResourceBody
@@ -84,14 +84,12 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    mainImgCtx <>
-    downloadCtx `mappend`
-    demoUrlCtx `mappend`
+    dateField "date" "%B %e, %Y" <>
+    mainImgCtx <> downloadCtx <> demoUrlCtx <>
     defaultContext
 
 postCtxWithTags :: Tags -> Context String 
-postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
+postCtxWithTags tags = tagsField "tags" tags <> postCtx
 
 mainImgCtx :: Context String 
 mainImgCtx = 
@@ -102,24 +100,14 @@ mainImgCtx =
 
 demoUrlCtx :: Context String 
 demoUrlCtx = 
-  field 
-    "demoUrl" 
-    (\item -> do 
+  field "demoUrl" $ \item -> do
       identifier <- getUnderlying 
-      mainImg <- getMetadataField identifier "demo" 
-      case mainImg of 
-        Nothing -> return "" 
-        Just t  -> return t 
-   ) 
+      metadata <- getMetadata (itemIdentifier item)
+      return $ fromMaybe "" $ M.lookup "cover" metadata
 
-downloadCtx :: Context String
+downloadCtx :: Context String 
 downloadCtx = 
-  field 
-    "downloadUrl" 
-    (\item -> do 
+  field "downloadUrl" $ \item -> do
       identifier <- getUnderlying 
-      mainImg <- getMetadataField identifier "download" 
-      case mainImg of 
-        Nothing -> return "" 
-        Just t  -> return t 
-   ) 
+      metadata <- getMetadata (itemIdentifier item)
+      return $ fromMaybe "" $ M.lookup "cover" metadata
