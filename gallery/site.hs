@@ -125,6 +125,6 @@ downloadCtx =
       identifier <- getUnderlying 
       mainImg <- getMetadataField identifier "download" 
       case mainImg of 
-        Nothing -> return "blank.png" 
+        Nothing -> return "" 
         Just t  -> return t 
    ) 
