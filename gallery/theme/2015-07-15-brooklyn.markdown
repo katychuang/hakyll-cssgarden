@@ -1,6 +1,6 @@
 ---
 title: brooklyn 
-tags: simple, default
+tags: simple, default, fixed-width
 cover: brooklyn-index.png
 screens: brooklyn-index, brooklyn-about, brooklyn-archive, brooklyn-contact, brooklyn-index
 demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=brooklyn
