@@ -142,6 +142,7 @@ ul.recent{
   padding-right: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 0;
 }
 
 ul.recent li {
@@ -162,15 +163,20 @@ div.index img.cover {
 }
 
 ul.filters {
+  background-color: #fafafa;
   list-style-type: none;
   padding-left: 0;
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
   padding: 5px 0;
+  margin-bottom: 0;
+  margin-left: -30px;
+  margin-right: -30px;
   text-align: right;
+  padding-right: 30px;
 }
 
 ul.filters li{
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
 }
