@@ -103,11 +103,11 @@ demoUrlCtx =
   field "demoUrl" $ \item -> do
       identifier <- getUnderlying 
       metadata <- getMetadata (itemIdentifier item)
-      return $ fromMaybe "" $ M.lookup "cover" metadata
+      return $ fromMaybe "" $ M.lookup "demo" metadata
 
 downloadCtx :: Context String 
 downloadCtx = 
   field "downloadUrl" $ \item -> do
       identifier <- getUnderlying 
       metadata <- getMetadata (itemIdentifier item)
-      return $ fromMaybe "" $ M.lookup "cover" metadata
+      return $ fromMaybe "" $ M.lookup "download" metadata
