@@ -44,7 +44,7 @@ div#header #navigation a:hover {
 div#content{
   margin-left: auto;
   margin-right: auto;
-  max-width: 960px;
+  max-width: 902px;
   padding: 30px;
   background-color: #ffffff;
   border-left: 1px solid #FFFFFF;
@@ -54,7 +54,7 @@ div#content{
 }
 
 div#content .main{
-  width: 620px;
+  width: 622px;
 }
 
 div#content a{
@@ -63,7 +63,7 @@ div#content a{
 }
 
 div#content .sidebar {
-  width: 300px;
+  width: 220px;
   float: right;
 }
 
@@ -72,9 +72,19 @@ div#content .sidebar .download {
   border: 1px solid #E5E5E5;
   font-weight: bold;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 2px;
   text-align: center;
+  background-image: -moz-linear-gradient(top, #1e8cbe 0%, #0074a2 100%);
+  background-image: -webkit-linear-gradient(top, #1e8cbe 0%,#0074a2 100%);
+  background-image: -ms-linear-gradient(top, #1e8cbe 0%,#0074a2 100%);
+  background-image: -o-linear-gradient(top, #1e8cbe 0%,#0074a2 100%);
+  background-image: linear-gradient(top, #1e8cbe 0%,#0074a2 100%);
+  -moz-box-shadow: inset 0 1px 0 #1e8cbe, inset 0 2px 0 rgba(120,200,230,0.5);
+  -webkit-box-shadow: inset 0 1px 0 #1e8cbe, inset 0 2px 0 rgba(120,200,230,0.5);
+  -o-box-shadow: inset 0 1px 0 #1e8cbe, inset 0 2px 0 rgba(120,200,230,0.5);
+  -ms-box-shadow: inset 0 1px 0 #1e8cbe, inset 0 2px 0 rgba(120,200,230,0.5);
+  box-shadow: inset 0 1px 0 #1e8cbe, inset 0 2px 0 rgba(120,200,230,0.5);
 }
 div#content .sidebar .download a {
   color: #FFFFFF;
@@ -84,14 +94,25 @@ div#content .sidebar .download a {
 div#content .sidebar .demo {
   background: #F0F1EE; /* #FFD464; /*yellow*/
   border-radius: 2px;
-  text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #DEDFDF;
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,.05) 0%, rgba(0,0,0,.15) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,.05) 0%, rgba(0,0,0,.15) 100%);
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,.05) 0%, rgba(0,0,0,.15) 100%);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,.05) 0%, rgba(0,0,0,.15) 100%);
+  background-image: linear-gradient(top, rgba(0,0,0,.05) 0%, rgba(0,0,0,.15) 100%);
+  -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,.05), inset 0 2px 0 rgba(255,255,255,.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.05), inset 0 2px 0 rgba(255,255,255,.4);
+  -o-box-shadow: inset 0 1px 0 rgba(0,0,0,.05), inset 0 2px 0 rgba(255,255,255,.4);
+  -ms-box-shadow: inset 0 1px 0 rgba(0,0,0,.05), inset 0 2px 0 rgba(255,255,255,.4);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.05), inset 0 2px 0 rgba(255,255,255,.4);
 }
 div#content .sidebar .demo a {
-  padding: 10px 0;
+  padding: 5px 8px;
+  text-align: center;
   width: 100%;
   display: block;
-  border: 1px solid #DEDFDF;
+  box-sizing: border-box;
 }
 
 div#content .sidebar .btn{
@@ -124,6 +145,10 @@ div.info {
     font-size: 14px;
 }
 
+div.info h3{
+    color: #555;
+    font-size: 16px;
+}
 
 div.promo img.cover{
   background-color: #FFFFFF;
