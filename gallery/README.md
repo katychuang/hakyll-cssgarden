@@ -1,33 +1,30 @@
-Default Theme
+Hakyll CSSGarden Gallery
 ===
 
-When you install hakyll, the default theme works with this directory structure: 
+This is the code that generates the gallery located at [http://katychuang.com/hakyll-cssgarden/gallery/](http://katychuang.com/hakyll-cssgarden/gallery/). 
+
+Theme pages are written in markdown format under the *themes* subdirectory. File names start with the year, month, and date, followed the title of the theme. For example, here is the structure for the haskell.org theme:
 
 ```sh
-   |-css
-   |-images
-   |-posts
-   |-templates
+   |-themes
+     |-2015-07-16-haskell.org.markdown
 ```
 
+Within each file, we have metadata at the top of the file these lines: 
 
-The templates have this structure by default:
-
+```markdown
+---
+title: theme title (try to avoid spaces) 
+author: author's name or username
+author-url: url to author's profile
+tags: tag1, tag2, tagN
+cover: filename.png
+screens: image1.png, image2.png, imageN.png
+demo: demo linke
+download: path/to/style.css
+---
 ```sh
-  |-templates/
-    |---archive.html
-    |---default.html
-    |---post-list.html
-    |---post.html
-```
 
+These lines are necessary to fill out each theme's detail page. Images should be placed under the `images` directory.
 
-The newly added css files are in the /css/ folder.
-
-
-To preview, run `./site preview` from this directory and go to http://localhost:8000 in your browser
-
-![default](https://farm3.staticflickr.com/2849/13828504474_a970027263_z.jpg)
-
-![brooklyn](https://farm8.staticflickr.com/7268/13828504554_62a7babaa1_z.jpg)
 
