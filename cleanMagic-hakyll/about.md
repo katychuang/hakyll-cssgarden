@@ -1,6 +1,6 @@
 ---
 title: About
-headerImg: room.jpg
+headerImg: beach.jpg
 ---
 
 Nullam imperdiet sodales orci vitae molestie. Nunc quam orci, pharetra a
