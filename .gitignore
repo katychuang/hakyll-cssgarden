@@ -5,3 +5,7 @@
 
 _site/*
 _cache/*
+
+*/_site/*
+*/_cache/*
+*/site
