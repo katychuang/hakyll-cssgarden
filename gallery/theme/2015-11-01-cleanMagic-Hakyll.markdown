@@ -5,7 +5,7 @@ author: katychuang
 authorurl: http://twitter.com/katychuang
 cover: cleanMagic_hakyll-index.png
 screens: cleanMagic_hakyll-index, cleanMagic_hakyll-about, cleanMagic_hakyll-archive, cleanMagic_hakyll-contact, cleanMagic_hakyll-index
-demo: http://katychuang.me
+demo: http://http://ismailmustafa.com
 download: https://github.com/katychuang/hakyll-cssgarden/blob/master/cleanMagic-hakyll
 ---
 
