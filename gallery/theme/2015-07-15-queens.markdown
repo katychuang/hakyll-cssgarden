@@ -9,4 +9,6 @@ demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=queens
 download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/queens.css
 ---
 
-This is a simple theme
+This is a simple theme based on the default Hakyll theme. It is reminiscent of the Queens borough, where most of the land is East of the main subway lines.
+
+This theme places the header menu on the left, with the main content on the right.

@@ -9,4 +9,4 @@ demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=haskell.org
 download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/haskell.org.css
 ---
 
-This is a simple theme
+This is a simple theme inspired by [Haskell.org](http://haskell.org)
