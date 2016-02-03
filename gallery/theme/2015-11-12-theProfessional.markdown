@@ -1,5 +1,7 @@
 ---
 title: The Professional
+author: katychuang
+authorurl: http://twitter.com/katychuang
 tags: fixed-width
 cover: theProfessional-index.png
 screens: theProfessional-index, theProfessional-about, theProfessional-archive, theProfessional-contact, theProfessional-index

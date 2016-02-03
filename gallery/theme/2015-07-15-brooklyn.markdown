@@ -1,6 +1,8 @@
 ---
 title: brooklyn 
 tags: simple, default, fixed-width
+author: katychuang
+authorurl: http://twitter.com/katychuang
 cover: brooklyn-index.png
 screens: brooklyn-index, brooklyn-about, brooklyn-archive, brooklyn-contact, brooklyn-index
 demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=brooklyn

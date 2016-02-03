@@ -1,6 +1,8 @@
 ---
 title: queens 
 tags: simple, default
+author: katychuang
+authorurl: http://twitter.com/katychuang
 cover: queens-index.png
 screens: queens-index, queens-about, queens-archive, queens-contact, queens-index
 demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=queens
