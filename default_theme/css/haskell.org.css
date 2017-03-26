@@ -4,6 +4,14 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+html {
+     /* to allow the #footer to be properly positioned 
+    at the bottom, even when #content is longer than
+    the viewport high */
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     color: black;
     font-size: 16px;
@@ -46,6 +54,7 @@ div#header #navigation a:hover{
 div#content {
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 5.5rem; /* footer-height + 1.5rem */
 }
 
 div#content h1{
