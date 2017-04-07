@@ -9,3 +9,5 @@ _cache/*
 */_site/*
 */_cache/*
 */site
+
+default-theme/site
