@@ -2,13 +2,19 @@
 
 Description: This collection of styles aims to help haskell bloggers set up beautiful blogs with Hakyll static site generator by showcasing available themes.
 
-[Check out the gallery of themes](http://katychuang.com/hakyll-cssgarden/gallery)
+> For themes with custom `site.hs`, consider the [hakyll-themes](http://github.com/katychuang/hakyll-themes) repo.
+
+* [Take me to the gallery with thumbnails](http://katychuang.com/hakyll-cssgarden/gallery)
+* [Take me to examples of hakyll site sources](http://github.com/katychuang/hakyll-themes) repo.
+
+> The examples in `default_theme` are using CSS to edit the default, out-of-the-box version of `site.hs` and `templates/*.html` that are created.
+> The example in `gallery` is used to generate the gallery site.
 
 ![](hakyllCSSGarden_preview.png)
 
 ## Installation & Setup
 
-To preview the themes locally, you can follow these steps
+To preview the themes locally, you can follow these steps:
 
 1. Install hakyll 
     * with stack or
@@ -23,7 +29,7 @@ To preview the themes locally, you can follow these steps
 
 It's through community contributions that will continue to improve this collection. You can contribute in several ways.
 
-* **Submitting theme**: If you'd like to contribute your theme, fork the repo, create a new subdirectory with your theme and site.hs files. 
+* **Submitting theme**: If you'd like to contribute your theme, fork the repo, create a new css file with your theme and place it in `default_theme/css`. 
     * if you're using the out of the box site.hs and template files: add the file to the css directory under `default_theme` and add an option to the dropdown menu in default.html
     * if you're contributing a whole new theme with a custom `site.hs` file, please consider contributing to [hakyll-themes](http://github.com/katychuang/hakyll-themes)
 
