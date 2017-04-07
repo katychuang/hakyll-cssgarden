@@ -15,7 +15,7 @@ To preview the themes locally, you can follow these steps
     * with cabal `cabal install hakyll` or 
     * with nix `nix-shell -p '(haskellPackages.ghcWithPackages (pkgs: with pkgs; [ hakyll ]))'`
 2. clone this repo
-3. cd into `default_theme` (or the subdirectory)
+3. cd into `default_theme`
 4. compile `ghc --make site.hs`
 4. run server with `./site watch` 
 
@@ -25,6 +25,7 @@ It's through community contributions that will continue to improve this collecti
 
 * **Submitting theme**: If you'd like to contribute your theme, fork the repo, create a new subdirectory with your theme and site.hs files. 
     * if you're using the out of the box site.hs and template files: add the file to the css directory under `default_theme` and add an option to the dropdown menu in default.html
+    * if you're contributing a whole new theme with a custom `site.hs` file, please consider contributing to [hakyll-themes](http://github.com/katychuang/hakyll-themes)
 
 * **Issues**: Provide a detailed report of any bugs you encounter, and open an issue on GitHub.
 
