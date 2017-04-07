@@ -5,8 +5,8 @@ authorurl: http://twitter.com/katychuang
 tags: fixed-width
 cover: theProfessional-index.png
 screens: theProfessional-index, theProfessional-about, theProfessional-archive, theProfessional-contact, theProfessional-index
-demo: http://katychuang.com/portfolio
-download: https://github.com/katychuang/hakyll-cssgarden/blob/master/theProfessional
+demo: http://katychuang.com/theProfessional-hakyll
+download: https://github.com/katychuang/theProfessional-hakyll
 ---
 
 # The Professional

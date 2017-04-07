@@ -6,7 +6,7 @@ authorurl: http://twitter.com/katychuang
 cover: cleanMagic_hakyll-index.png
 screens: cleanMagic_hakyll-index, cleanMagic_hakyll-about, cleanMagic_hakyll-archive, cleanMagic_hakyll-contact, cleanMagic_hakyll-index
 demo: http://ismailmustafa.com
-download: https://github.com/katychuang/hakyll-cssgarden/blob/master/cleanMagic-hakyll
+download: https://github.com/katychuang/CleanMagic-hakyll
 ---
 
 # CleanMagic for Hakyll
@@ -23,11 +23,51 @@ Features a nice big header image to sweeten your page.
 
 ## Installation:
 
-Download the files under the `cleanMagic-hakyll` folder in the hakyll-cssgarden repo to your root hakyll installation for the boilerplate. Feel free to tweak site.hs and any of the files.
+Clone the repo and compile the `site.hs` file.
 
-Compile the site generator with hakyll using the command `ghc --make site.hs`
+```haskell
+git clone https://github.com/katychuang/CleanMagic-hakyll.git
+cd CleanMagic-hakyll
+ghc --make site.hs
+```
 
 Then you can view your site locally with `./site rebuild && ./site watch`
+
+
+Feel free to tweak site.hs and any of the files.
+
+Note that this theme has specific features with requires a custom written [siteCtx context](https://github.com/katychuang/hakyll-cssgarden/blob/master/cleanMagic-hakyll/site.hs#L67), with specific fields mapped to the template fields. For example, $side_description$ is mapped below to "my beautiful blog"
+
+
+```haskell
+siteCtx :: Context String
+siteCtx = 
+    constField "baseurl" "http://localhost:8000" `mappend` 
+    constField "site_description" "my beautiful blog" `mappend`
+    constField "instagram_username" "katychuang.nyc" `mappend`
+    constField "twitter_username" "katychuang" `mappend`
+    constField "github_username" "katychuang" `mappend`
+    constField "google_username" "katychuang" `mappend`
+    defaultContext
+```
+
+Once you have the field strings written as how you'd like it, make sure that you're connecting this function where your pages are being rendered, for example in creating the `index.html` page, you want to include it, similar to the following ([ref](https://github.com/katychuang/hakyll-cssgarden/blob/master/cleanMagic-hakyll/site.hs#L51)): 
+
+```haskell
+match "index.html" $ do
+    route idRoute
+    compile $ do
+        posts <- recentFirst =<< loadAll "posts/*"
+        let indexCtx =
+                listField "posts" postCtx (return posts) `mappend`
+                constField "title" "Home"                `mappend`
+                siteCtx -- INCLUDE THE CUSTOM FUNCTION, it sends variable/values to the template in the lines below
+
+        getResourceBody
+            >>= applyAsTemplate indexCtx
+            >>= loadAndApplyTemplate "templates/default.html" indexCtx
+            >>= relativizeUrls
+```
 
 ---
 
