@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="@katychuang" />
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+        <title>Hakyll CSS Garden</title>
+	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+        <script src="../css/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" title="hakyll_theme" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+              <a href="../">Hakyll <span style="color: #FB8694;">CSS</span><span style="color: #9ED2AD;">Garden</span></a>
+            </div>
+            <div id="navigation">
+                <a href="../about.html">About</a>
+                <a href="../index.html">Recent</a>
+                <a href="../archive.html">All Themes</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1>cleanMagic-hakyll</h1>
+
+            <div class="sidebar">
+  <div class="download">
+    <a href="https://github.com/katychuang/hakyll-cssgarden/blob/master/cleanMagic-hakyll" class="btn">Download</a>
+  </div>
+  <div class="demo">
+    <a href="http://ismailmustafa.com" class="btn">Live Demo</a>
+  </div>
+  <div class="info">
+    <h3>Tags</h3>
+     
+      Tags: <a href="../tags/fixed-width.html">fixed-width</a> 
+    
+  </div>
+
+  <div class="info">
+    <h3>Stats/Information</h3>
+      Posted: November  1, 2015
+      
+      <br />
+      Credits: <a href="http://twitter.com/katychuang">katychuang</a>
+      
+  </div>
+</div>
+
+<div class="main">
+  
+  <div class="promo">
+    <img src="../images/cleanMagic_hakyll-index.png" class="cover" />
+  </div>
+  
+
+  <h1 id="cleanmagic-for-hakyll">CleanMagic for Hakyll</h1>
+<p>This theme is a fork of <a href="https://github.com/SpaceG/CleanMagicMedium-Jekyll">CleanMagicMedium-Jekyll</a> originally published by Lucas Gatsas.</p>
+<p>It features a top navigation bar, and an area for beautiful header background images. Clean and serene, it’s sure to give your posts an extra polish.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/SpaceG/spaceg.github.io/5f240c5e8b3f8e2cb9f776688466de651d5d8958/img/intro-theme-1.png" alt="Preview" />
+<p class="caption">Preview</p>
+</div>
+<p>Features a nice big header image to sweeten your page.</p>
+<hr />
+<h2 id="installation">Installation:</h2>
+<p>Download the files under the <code>cleanMagic-hakyll</code> folder in the hakyll-cssgarden repo to your root hakyll installation for the boilerplate. Feel free to tweak site.hs and any of the files.</p>
+<p>Compile the site generator with hakyll using the command <code>ghc --make site.hs</code></p>
+<p>Then you can view your site locally with <code>./site rebuild &amp;&amp; ./site watch</code></p>
+<hr />
+<h2 id="usage">Usage</h2>
+<h3 id="posts"><strong>Posts</strong></h3>
+<p>At the top of each blog post saved in the <code>posts</code> folder:</p>
+<pre class="sourceCode markdown"><code class="sourceCode markdown">---
+title: Carpe Diem
+headerImg: file.jpg
+---</code></pre>
+<p>You have the option of adding your custom fields. For example here headerImg is defined for custom files but you can choose to have the same image on all blog posts.</p>
+<h3 id="pagination"><strong>Pagination</strong></h3>
+<p>The template post.html comes with tags for <em>next post</em> and <em>previous post</em>.</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;ul</span><span class="ot"> class=</span><span class="st">&quot;pager&quot;</span><span class="kw">&gt;</span>
+    $if(previous.url)$
+    <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;previous&quot;</span><span class="kw">&gt;</span>
+	<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}&quot;</span> 
+<span class="ot">	   title=</span><span class="st">&quot;{{page.previous.title}}&quot;</span><span class="kw">&gt;</span><span class="dv">&amp;larr;</span> Previous Post<span class="kw">&lt;/a&gt;</span>
+    <span class="kw">&lt;/li&gt;</span>
+    $endif$
+    $if(next.url)$
+    <span class="kw">&lt;li</span><span class="ot"> class=</span><span class="st">&quot;next&quot;</span><span class="kw">&gt;</span>
+	<span class="kw">&lt;a</span><span class="ot"> href=</span><span class="st">&quot;{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}&quot;</span>
+<span class="ot">           title=</span><span class="st">&quot;{{page.next.title}}&quot;</span><span class="kw">&gt;</span>Next Post <span class="dv">&amp;rarr;</span><span class="kw">&lt;/a&gt;</span>
+    <span class="kw">&lt;/li&gt;</span>
+    $endif$
+<span class="kw">&lt;/ul&gt;</span></code></pre>
+<p>See <a href>this blog post</a> for an example of how to turn on these links.</p>
+<h3 id="syntax-highlighting"><strong>Syntax Highlighting</strong></h3>
+<p>Syntax highlighting uses the pandoc formatting.</p>
+<pre><code>```hs
+fs x = &quot;your code here&quot;
+```</code></pre>
+<p>The colors are defined in syntax.css; which you can edit to your liking.</p>
+</div>
+
+        </div>
+        <div id="footer">
+            This site is generated with
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>, designed by <a href="http://www.twitter.com/katychuang">Katy Chuang</a>
+        </div>
+    </body>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-2990063-3', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</html>
