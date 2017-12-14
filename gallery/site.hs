@@ -26,19 +26,19 @@ main = hakyll $ do
     -- http://javran.github.io/posts/2014-03-01-add-tags-to-your-hakyll-blog.html
     tags <- buildTags "theme/*" (fromCapture "tags/*.html")
 
-    tagsRules tags $ \tag pattern -> do   
-      let title = "Themes tagged \'" ++ tag ++ "\'" 
-      route idRoute 
-      compile $ do 
-          posts <- recentFirst =<< loadAll pattern 
-          let ctx = 
+    tagsRules tags $ \tag pattern -> do
+      let title = "Themes tagged \'" ++ tag ++ "\'"
+      route idRoute
+      compile $ do
+          posts <- recentFirst =<< loadAll pattern
+          let ctx =
                 constField "title" title <>
                 listField "posts" postCtx (return posts) <>
-                defaultContext 
+                defaultContext
 
-          makeItem "" 
-              >>= loadAndApplyTemplate "templates/tag.html" ctx 
-              >>= loadAndApplyTemplate "templates/default.html" ctx 
+          makeItem ""
+              >>= loadAndApplyTemplate "templates/tag.html" ctx
+              >>= loadAndApplyTemplate "templates/default.html" ctx
               >>= relativizeUrls
 
     match "theme/*" $ do
@@ -59,14 +59,14 @@ main = hakyll $ do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx 
+                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
 
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- fmap (take 10) . recentFirst =<< 
+            posts <- fmap (take 10) . recentFirst =<<
               loadAll "theme/*"
             let indexCtx =
                     listField "posts" postCtx (return posts) <>
@@ -88,26 +88,31 @@ postCtx =
     mainImgCtx <> downloadCtx <> demoUrlCtx <>
     defaultContext
 
-postCtxWithTags :: Tags -> Context String 
+postCtxWithTags :: Tags -> Context String
 postCtxWithTags tags = tagsField "tags" tags <> postCtx
 
-mainImgCtx :: Context String 
-mainImgCtx = 
-  field "cover" $ \item -> do
-      identifier <- getUnderlying 
-      metadata <- getMetadata (itemIdentifier item)
-      return $ fromMaybe "blank.png" $ M.lookup "cover" metadata
+mainImgCtx :: Context a
+mainImgCtx = field "cover" $ \item -> do
+      c <- getMetadataField (itemIdentifier item) "cover"
+        -- if tags is empty return an empty string
+        -- in the other case return
+        --   <img src="$cover$.jpg">
+      return $ maybe "blank.png" showCover c
+          where
+            showCover t = t
 
-demoUrlCtx :: Context String 
-demoUrlCtx = 
+demoUrlCtx :: Context String
+demoUrlCtx =
   field "demoUrl" $ \item -> do
-      identifier <- getUnderlying 
-      metadata <- getMetadata (itemIdentifier item)
-      return $ fromMaybe "" $ M.lookup "demo" metadata
+      c <- getMetadataField (itemIdentifier item) "demo"
+      return $ maybe "" showLink c
+          where
+            showLink t = t
 
-downloadCtx :: Context String 
-downloadCtx = 
+downloadCtx :: Context String
+downloadCtx =
   field "downloadUrl" $ \item -> do
-      identifier <- getUnderlying 
-      metadata <- getMetadata (itemIdentifier item)
-      return $ fromMaybe "" $ M.lookup "download" metadata
+      c <- getMetadataField (itemIdentifier item) "download"
+      return $ maybe "" showLink c
+          where
+            showLink t = t
