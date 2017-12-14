@@ -1,1 +1,87 @@
-@import "base.css";body{font-family:sans-serif;margin-top:50px;padding-top:20px;margin-left:300px}div#header{padding:12px 20px 12px 0px;height:100%;width:270px;position:fixed;left:0;top:0;background:#C0DFDF;color:white}div#logo{text-align:center;margin-bottom:40px;margin-top:40px}div#logo a{color:#fff;font-family:times, serif;font-size:38px;font-weight:light;text-decoration:none;width:270px}div#header #navigation{display:table;margin-left:40px}div#header #navigation a{display:table-row;color:white;font-size:18px;font-weight:bold;text-decoration:none;text-transform:uppercase;width:100%}div#footer{color:#555;font-size:12px;margin-top:30px;padding:12px 30px 12px 0px;text-align:right}h1{font-size:24px}h2{font-size:20px}div.info{color:#555;font-size:14px;font-style:italic;text-align:center}div#content{font-size:14px;line-height:18px;padding:0 30px 20px 30px}div#content h1{color:#bbb;font-family:times, serif;font-style:italic;font-size:46px;text-align:center}
+@import "base.css";
+
+body {
+    font-family: sans-serif;
+    margin-top:50px;
+    padding-top: 20px;
+    margin-left:300px;
+}
+
+header {
+    padding: 12px 20px 12px 0px;
+    height: 100%;
+    width:270px;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#C0DFDF;
+    color: white;
+}
+
+div.logo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+div.logo a {
+    color: #fff;
+    font-family: times, serif;
+    font-size: 38px;
+    font-weight: light;
+    text-decoration: none;
+    width: 270px;
+}
+
+header nav {
+    display:table;
+    margin-left: 40px;
+}
+
+header nav a {
+    display:table-row;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    width:100%;
+}
+
+footer {
+    color: #555;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 12px 30px 12px 0px;
+    text-align: right;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+section.header {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+div#content{
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 30px 20px 30px;
+}
+
+div#content h1{
+    color: #bbb;
+    font-family: times, serif;
+    font-style: italic;
+    font-size: 46px;
+    text-align: center;
+}
+
