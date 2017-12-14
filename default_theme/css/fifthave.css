@@ -1,5 +1,5 @@
 /*
-Theme Name: 5th Ave 
+Theme Name: 5th Ave
 Theme URI: http://katychuang.com
 Description: A minimalist theme with excerpts on the front and a customizable footer.
 Version: 0.1
@@ -16,8 +16,8 @@ body {
     color: #000;
     font-family: 'Halant', sans-serif;
     font-size: 16px;
-    margin: 0;
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
     padding: 30px 0 0 0;
 }
 
@@ -26,7 +26,7 @@ a{
     text-decoration: none;
 }
 
-div#header {
+header {
     border-bobrowsingttom: 1px solid rgb(109, 145, 225);
     margin-bottom: 30px;
     padding: 2.5em 0px 12px 0px;
@@ -34,12 +34,12 @@ div#header {
     width: 100%;
 }
 
-div#logo {
+div.logo {
     width:100%;
     text-align: center;
 }
 
-div#logo a {
+div.logo a {
     color: #1A9485;
     font-family: 'Halant', serif;
     font-size: 24px;
@@ -48,12 +48,12 @@ div#logo a {
     text-shadow: none;
 }
 
-div#header #navigation {
+header nav {
     margin-top: 20px;
     text-align: center;
 }
 
-div#header #navigation a {
+header nav a {
     color: #1A9485;
     font-family: 'Halant', serif;
     font-size: 16px;
@@ -63,14 +63,14 @@ div#header #navigation a {
     text-transform: uppercase;
 }
 
-div#header #navigation a:hover {
+header nav a:hover {
     background:#113;
     color: white;
     text-decoration: none;
 }
 
 
-div#footer {
+footer {
     background: #343434;
     color: #EEE;
     font-size: 12px;
@@ -82,7 +82,7 @@ div#footer {
     width:100%;
 }
 
-div#footer a {
+footer a {
     color: #fb8694;
     text-decoration: none;
 }
@@ -95,43 +95,55 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;
 }
 
-#content {
+main {
     background: white;
     margin-bottom: 70px;
     width: 100%;
     padding: 30px 20px 150px 20px;
 }
 
-#content p, #content div, #content h1, #content h2, #content h3, #content h4, #content h5, #content ol, #content ul, #content blockquote {
+main div.info {
+    width: 600px;
+    margin: auto;
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: arial;
+    color: #AAA;
+    font-size: .8em;
+    margin-bottom: 2em;
+}
+
+main p, main h1, main h2, main h3, main h4, main h5, main ol, main ul, main blockquote {
     width: 600px;
     margin: auto;
     line-height: 1.75em;
 }
 
-#content h1, #content h2, #content h3, #content h4, #content h5, #content ol, #content ul{
+main h1, main h2, main h3, main h4, main h5, main ol, main ul{
     margin-top: 0.9em;
     margin-bottom: 0.5em;
     line-height: 2em;
 }
 
-#content p + p {
+main p + p {
     margin-top: 1.8em;
 }
 
-#content img {
+main img {
     padding: 30px;
     border:1px solid rgba(0,0,0,0.2);
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)) opacity(0.7);
     width: 120px;
 }
 
-#content img:hover{
+main img:hover{
     width: initial;
     padding: 50px;
     background: #FFF;
@@ -141,16 +153,16 @@ div.info {
     transition: width 0.2s, height 0.4s;
 }
 
-#content a, #content a:visited {
+main a, main a:visited {
     color: #fb8694;
     cursor: pointer;
 }
 
-#content a:hover, #content a:focus{
+main a:hover, main a:focus{
     color: #96838E;
 }
 
-#content blockquote {
+main blockquote {
     margin-left: 1em;
     padding-left: 1em;
     border-left: 2px solid #CCC;

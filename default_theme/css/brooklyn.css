@@ -27,7 +27,7 @@ div#header {
     padding: 12px 0px 12px 0px;
 }
 
-div#logo a {
+div.logo a {
     color: #343333;
     display:none;
     float: left;
@@ -36,7 +36,7 @@ div#logo a {
     text-decoration: none;
 }
 
-div#logo a:hover {
+div.logo a:hover {
     color: #A43400;
     float: left;
     font-size: 18px;
@@ -44,11 +44,11 @@ div#logo a:hover {
     text-decoration: none;
 }
 
-div#header #navigation {
+header nav {
     text-align: right;
 }
 
-div#header #navigation a {
+header nav a {
     color: #343333;
     font-size: 18px;
     font-weight: bold;
@@ -57,14 +57,14 @@ div#header #navigation a {
     text-transform: uppercase;
 }
 
-div#header #navigation a:hover {
+header nav a:hover {
     color: #666;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 
-div#footer {
+footer {
     border-top: dotted 1px #ddd;
     color: #BBB;
     font-size: 12px;
@@ -73,7 +73,7 @@ div#footer {
     text-align: right;
 }
 
-div#footer a{
+footer a{
     font-size: 12px;
     font-weight: 500;
 }
@@ -86,7 +86,7 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;

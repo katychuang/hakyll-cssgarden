@@ -28,7 +28,7 @@ a{
     text-decoration: none;
 }
 
-div#header {
+header {
     border-bottom: 1px solid rgb(109, 145, 225);
     margin-bottom: 30px;
     padding: 65px 0px 12px 0px;
@@ -36,28 +36,28 @@ div#header {
     width:100%;
 }
 
-div#logo {
+div.logo {
     width:100%;
     text-align: center;
 }
 
-div#logo a {
+div.logo a {
     color: #666;
-    font-family: 'Coustard', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 38px;
     font-weight: bold;
     text-decoration: none;
     text-shadow:;
 }
 
-div#header #navigation {
+header nav {
     margin-top: 20px;
     text-align: center;
 }
 
-div#header #navigation a {
+header nav a {
     color: #00B;
-    font-family: 'Antic Slab', sans-serif;
+    font-family: 'Bangers', sans-serif;
     font-size: 20px;
     font-weight: bold;
     margin-left: 5px;
@@ -65,14 +65,14 @@ div#header #navigation a {
     text-transform: uppercase;
 }
 
-div#header #navigation a:hover {
+header nav a:hover {
     background:#113;
     color:white;
     text-decoration: none;
 }
 
 
-div#footer {
+footer {
     background: rgb(109, 145, 225);
     color: #444;
     font-size: 12px;
@@ -84,7 +84,7 @@ div#footer {
     width:100%;
 }
 
-div#footer a {
+footer a {
     color: #000;
     text-decoration: none;
 }
@@ -97,10 +97,8 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;
 }
-
-

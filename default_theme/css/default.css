@@ -4,29 +4,21 @@
 body {
     color: black;
     font-size: 16px;
-    margin: 50px auto 0px auto;
+    margin: 0px auto 0px auto;
     width: 600px;
 }
 
-div#header {
+header {
     border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
 
-div#logo a {
-    color: black;
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-div#header #navigation {
+nav {
     text-align: right;
 }
 
-div#header #navigation a {
+nav a {
     color: black;
     font-size: 18px;
     font-weight: bold;
@@ -35,7 +27,7 @@ div#header #navigation a {
     text-transform: uppercase;
 }
 
-div#footer {
+footer {
     border-top: solid 2px black;
     color: #555;
     font-size: 12px;
@@ -52,8 +44,16 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+article .header {
     color: #555;
     font-size: 14px;
     font-style: italic;
+}
+
+.logo a {
+    color: black;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }

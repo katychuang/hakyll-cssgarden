@@ -36,11 +36,11 @@ div#logo a {
     background: rgba(248, 248, 248, 0.5);
 }
 
-div#header #navigation {
+header nav {
     text-align: right;
 }
 
-div#header #navigation a {
+header nav a {
     color: #BCD6C7;
     font-size: 18px;
     font-weight: light;
@@ -50,11 +50,11 @@ div#header #navigation a {
     background: rgba(0,0,0,0.5);
 }
 
-div#header #navigation a:hover {
+header nav a:hover {
     color: #fff;
 }
 
-div#footer {
+footer {
     border-top: solid 2px black;
     color: #555;
     font-size: 12px;
@@ -71,7 +71,7 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;

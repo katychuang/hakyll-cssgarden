@@ -7,7 +7,7 @@ body {
     margin-left:300px;
 }
 
-div#header {
+header {
     padding: 12px 20px 12px 0px;
     height: 100%;
     width:270px;
@@ -18,13 +18,13 @@ div#header {
     color: white;
 }
 
-div#logo {
+div.logo {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 40px;
 }
 
-div#logo a {
+div.logo a {
     color: #fff;
     font-family: times, serif;
     font-size: 38px;
@@ -33,12 +33,12 @@ div#logo a {
     width: 270px;
 }
 
-div#header #navigation {
+header nav {
     display:table;
     margin-left: 40px;
 }
 
-div#header #navigation a {
+header nav a {
     display:table-row;
     color: white;
     font-size: 18px;
@@ -48,7 +48,7 @@ div#header #navigation a {
     width:100%;
 }
 
-div#footer {
+footer {
     color: #555;
     font-size: 12px;
     margin-top: 30px;
@@ -64,7 +64,7 @@ h2 {
     font-size: 20px;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;

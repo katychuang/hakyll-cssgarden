@@ -11,13 +11,13 @@ body {
     margin: 40px auto 0px auto;
 }
 
-div#header {
+header {
     margin-bottom: 0px;
     padding: 50px 50px 10px 50px;
     background: #FFFFFF;
 }
 
-div#logo a {
+div.logo a {
     color: #000000;
     float: left;
     font-family: Avenir, 'Open Sans', sans-serif;
@@ -25,12 +25,12 @@ div#logo a {
     text-decoration: none;
 }
 
-div#header #navigation {
+header nav {
     line-height: 45px;
     text-align: right;
 }
 
-div#header #navigation a {
+header nav a {
     color: #BBBBBB;
     font-family: Avenir, 'Open Sans', sans-serif;
     font-size: 16px;
@@ -39,16 +39,16 @@ div#header #navigation a {
     text-transform: capitalize;
 }
 
-div#header #navigation a:hover{
+header nav a:hover{
   color: #000000;
 }
 
-div#content {
+main {
   margin-left: 50px;
   margin-right: 50px;
 }
 
-div#content h1{
+main h1{
   color: #222222;
   font-size: 42px;
   font-family: Avenir, 'Open Sans', sans-serif;
@@ -56,20 +56,20 @@ div#content h1{
   line-height: 1.45;
 }
 
-div#content, /* this line for archives page */
-div#content p{
+main, /* this line for archives page */
+main p{
     color: #666666;
     font-family: Avenir, 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
 
-div#content a{
+main a{
   color: #428bca;
   text-decoration: none;
 }
 
-div#footer {
+footer {
     border-top: 1px solid #DEDEE1;
     color: #999999;
     font-size: 16px;
@@ -84,14 +84,14 @@ div#footer {
     font-family: Avenir, 'Open Sans', sans-serif;
 }
 
-div#footer a {
+footer a {
   color: #428bca;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
 
-div.info {
+section.header {
     color: #555;
     font-size: 14px;
     font-style: italic;
