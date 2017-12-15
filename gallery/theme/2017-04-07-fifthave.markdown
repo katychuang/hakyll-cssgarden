@@ -1,6 +1,6 @@
 ---
 title: Fifth Ave
-tags: simple, default
+tags: simple, default, fixed-width
 author: katychuang
 authorurl: http://twitter.com/katychuang
 cover: fifthave-index.png
@@ -9,5 +9,4 @@ demo: http://katychuang.com/hakyll-cssgarden/themes/default/?theme=fifthave
 download: https://github.com/katychuang/hakyll-cssgarden/blob/master/default_theme/css/fifthave.css
 ---
 
-This is a simple theme for the default installation of Hakyll 4, that has a fixed width for the content. It is a clean layout for showcasing your work. 
-
+This is a simple theme for the default installation of Hakyll 4, that has a fixed width for the content. It is a clean layout for showcasing your work.
