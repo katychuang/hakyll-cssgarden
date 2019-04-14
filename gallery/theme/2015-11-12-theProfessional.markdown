@@ -20,11 +20,13 @@ It features a fixed with and navigation at the top of the page, and an it's sure
 
 ## Installation:
 
-Download the files under the `theProfessional` folder in the hakyll-cssgarden repo to your root hakyll installation for the boilerplate. Feel free to tweak site.hs and any of the files.
+Download the files from the [theProfessional](https://github.com/katychuang/theProfessional-hakyll) repo to your root hakyll installation for the boilerplate. Feel free to tweak site.hs and any of the files.
 
-Compile the site generator with hakyll using the command `ghc --make site.hs`
+Compile the site generator with hakyll using the command `ghc --make site.hs` to create a local executable named `site`
 
 Then you can view your site locally with `./site rebuild && ./site watch`
+
+Note: These were the commands I used before stack became available. Now that hakyll can be installed by stack you can you can use stack commands.
 
 ---
 
